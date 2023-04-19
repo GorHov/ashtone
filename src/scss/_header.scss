@@ -1,0 +1,24 @@
+@import 'variables';
+@import 'mixins';
+
+.main-menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  
+    @include respond-to('tablet') {
+      display: none;
+    }
+  }
+  
+.mobile-menu {
+  display: none;
+
+  @include respond-to('tablet') {
+    display: block;
+  }
+
+  @include respond-to('mobile') {
+    display: block;
+  }
+}
